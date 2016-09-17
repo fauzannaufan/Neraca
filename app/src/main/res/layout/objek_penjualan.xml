@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Transaksi"
+        android:text="Catat Transaksi"
         android:id="@+id/transaksiLabel"
         android:background="#a20101"
         android:textColor="#ffffff"
@@ -30,7 +30,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="15dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -143,7 +144,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tambahkan Item"
+                    android:text="Tambahkan Objek"
                     android:id="@+id/addItemButton"
                     android:layout_below="@+id/container"
                     android:layout_centerHorizontal="true"
@@ -151,22 +152,26 @@
 
             </RelativeLayout>
 
-        </RelativeLayout>
-    </ScrollView>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:id="@+id/submitButton"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="false"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:text="Catat"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#0052a5"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@+id/keluarLayout"
+                android:layout_marginTop="30dp" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:id="@+id/submitButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:clickable="true"
-        android:onClick="onClick"
-        android:text="Submit"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="#0052a5"
-        android:textColor="#ffffff" />
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
