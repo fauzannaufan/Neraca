@@ -45,6 +45,7 @@
             android:parentActivityName="com.example.user.neraca_1.JenisTransaksiActivity"
             android:screenOrientation="portrait" />
         <activity android:name="com.example.user.neraca_1.PembelianActivity" />
+        <activity android:name="com.example.user.neraca_1.PengingatActivity"></activity>
     </application>
 
 </manifest>

@@ -26,4 +26,9 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, JurnalTransaksiActivity.class);
         startActivity(intent);
     }
+
+    public void openPengingat(View view) {
+        Intent intent = new Intent(this, PengingatActivity.class);
+        startActivity(intent);
+    }
 }

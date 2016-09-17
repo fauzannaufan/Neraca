@@ -15,6 +15,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.user.test.R;
 
@@ -141,6 +142,9 @@ public class PembelianActivity extends ActionBarActivity implements View.OnClick
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+
+        Toast toast = Toast.makeText(getApplicationContext(), "Transaksi berhasil dicatat!", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public String[][] populateOptions(){

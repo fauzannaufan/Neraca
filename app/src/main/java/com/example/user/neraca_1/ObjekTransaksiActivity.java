@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.user.test.R;
 
@@ -142,6 +143,9 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+
+        Toast toast = Toast.makeText(getApplicationContext(), "Transaksi berhasil dicatat!", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public String[][] populateOptions(){

@@ -43,13 +43,14 @@
             <ImageButton
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:id="@+id/rekomendasiButton"
+                android:id="@+id/pengingatButton"
                 android:layout_below="@+id/textView"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="40dp"
                 android:layout_marginRight="40dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/rekomendasi"
+                android:onClick="openPengingat"
+                android:src="@drawable/pengingat"
                 android:background="#00ffffff" />
 
             <ImageButton
@@ -68,13 +69,13 @@
             <ImageButton
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:id="@+id/penghitunganButton"
+                android:id="@+id/eksporButton"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="40dp"
-                android:layout_below="@+id/rekomendasiButton"
+                android:layout_below="@+id/pengingatButton"
                 android:scaleType="centerCrop"
-                android:src="@drawable/penghitungan"
+                android:src="@drawable/ekspor"
                 android:background="#00ffffff" />
 
             <ImageButton
@@ -96,7 +97,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="40dp"
-                android:layout_below="@+id/penghitunganButton"
+                android:layout_below="@+id/eksporButton"
                 android:background="#00ffffff"
                 android:src="@drawable/pengaturan"
                 android:scaleType="centerCrop" />
