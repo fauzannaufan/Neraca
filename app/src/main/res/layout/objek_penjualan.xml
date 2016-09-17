@@ -108,6 +108,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/keluarLayout"
                 android:layout_marginTop="0dp"
+                android:layout_marginBottom="15dp"
                 android:layout_below="@+id/separator">
 
                 <TextView
@@ -152,6 +153,42 @@
 
             </RelativeLayout>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:id="@+id/separator2"
+                android:layout_below="@+id/keluarLayout"
+                android:background="#eb1515" />
+
+            <RelativeLayout
+                android:id="@+id/fotoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/separator2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Ambil Foto Nota"
+                    android:id="@+id/takePhotoLabel"
+                    android:textColor="#471818"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:background="#cccccc" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/takePhotoLabel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:onClick="TakePicture"
+                    android:src="@drawable/kamera" />
+
+            </RelativeLayout>
+
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
@@ -167,8 +204,8 @@
                 android:background="#0052a5"
                 android:textColor="#ffffff"
                 android:layout_marginBottom="15dp"
-                android:layout_below="@+id/keluarLayout"
-                android:layout_marginTop="30dp" />
+                android:layout_below="@+id/fotoLayout"
+                android:layout_marginTop="15dp" />
 
         </RelativeLayout>
 
