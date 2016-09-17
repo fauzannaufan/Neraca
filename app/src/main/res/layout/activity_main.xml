@@ -16,16 +16,18 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
+                android:src="@drawable/neraca"
                 android:id="@+id/textView" />
 
             <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:id="@+id/transaksiButton"
                 android:layout_below="@+id/textView"
                 android:layout_centerVertical="true"
@@ -33,24 +35,26 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginLeft="40dp"
                 android:onClick="openTransaksi"
+                android:src="@drawable/transaksi"
                 android:background="#00ffffff"
                 android:clickable="false"
                 android:scaleType="centerCrop" />
 
             <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:id="@+id/rekomendasiButton"
                 android:layout_below="@+id/textView"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="40dp"
                 android:layout_marginRight="40dp"
                 android:scaleType="centerCrop"
+                android:src="@drawable/rekomendasi"
                 android:background="#00ffffff" />
 
             <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:id="@+id/rekapitulasiButton"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
@@ -58,39 +62,43 @@
                 android:layout_alignParentLeft="true"
                 android:onClick="openRekap"
                 android:scaleType="centerCrop"
+                android:src="@drawable/rekapitulasi"
                 android:background="#00ffffff" />
 
             <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:id="@+id/penghitunganButton"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="40dp"
                 android:layout_below="@+id/rekomendasiButton"
                 android:scaleType="centerCrop"
+                android:src="@drawable/penghitungan"
                 android:background="#00ffffff" />
 
             <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:id="@+id/bantuanButton"
                 android:layout_below="@+id/rekapitulasiButton"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_alignParentLeft="true"
                 android:scaleType="centerCrop"
+                android:src="@drawable/bantuan"
                 android:background="#00ffffff" />
 
             <ImageButton
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:id="@+id/pengaturanButton"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="40dp"
                 android:layout_below="@+id/penghitunganButton"
                 android:background="#00ffffff"
+                android:src="@drawable/pengaturan"
                 android:scaleType="centerCrop" />
 
         </RelativeLayout>
