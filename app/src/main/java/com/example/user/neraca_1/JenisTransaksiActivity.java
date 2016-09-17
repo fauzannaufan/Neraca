@@ -79,7 +79,12 @@ public class JenisTransaksiActivity extends ActionBarActivity {
         String waktuTransaksi = waktuButton.getText().toString();
         String keterangan = keteranganTextView.getText().toString();
 
-        Intent intent = new Intent(this, ObjekTransaksiActivity.class);
+        Intent intent;
+        if (jenisTransaksi.equals("Penjualan")) {
+            intent = new Intent(this, ObjekTransaksiActivity.class);
+        } else {
+            intent = new Intent(this, PembelianActivity.class);
+        }
 
         intent.putExtra("jenis", jenisTransaksi);
         intent.putExtra("waktu", waktuTransaksi);

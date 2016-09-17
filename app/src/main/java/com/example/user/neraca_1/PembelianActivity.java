@@ -5,9 +5,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,10 +20,7 @@ import com.example.user.test.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by User on 7/21/2016.
- */
-public class ObjekTransaksiActivity extends ActionBarActivity implements View.OnClickListener {
+public class PembelianActivity extends ActionBarActivity implements View.OnClickListener {
 
     DBHelper mydb;
     String jenisTransaksi;
@@ -39,11 +36,11 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
     String[] list_satuan;
     String[] list_dummy = {"-Item Baru-", "Mie Kuning", "Daging Sapi", "Caisim"};
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.objek_penjualan);
+        setContentView(R.layout.activity_pembelian);
 
         Button submitButton = (Button)findViewById(R.id.submitButton);
         submitButton.setOnClickListener(this);
@@ -70,7 +67,7 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
 
             @Override
             public void onClick(View arg0) {
-                builder = new AlertDialog.Builder(ObjekTransaksiActivity.this);
+                builder = new AlertDialog.Builder(PembelianActivity.this);
                 builder.setTitle("Pilih Barang");
                 builder.setItems(list_dummy, new DialogInterface.OnClickListener() {
 
@@ -78,14 +75,14 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
                     public void onClick(DialogInterface dialog, int which) {
 
                         jumlah_barang++;
-                        Log.i("ObjekTransaksiActivity", "input 3 sukses");
+                        Log.i("PembelianActivity", "input 3 sukses");
                         LayoutInflater layoutInflater =
                                 (LayoutInflater) getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                         final View addView;
-                        Log.i("ObjekTransaksiActivity", "input 4 sukses");
+                        Log.i("PembelianActivity", "input 4 sukses");
                         if (which == 0) {
                             addView = layoutInflater.inflate(R.layout.tambah_barang_baru, null);
-                            Log.i("ObjekTransaksiActivity", "input a sukses");
+                            Log.i("PembelianActivity", "input a sukses");
                         } else if (which == 1) {
                             addView = layoutInflater.inflate(R.layout.tambah_barang, null);
                             TextView nama = (TextView) addView.findViewById(R.id.nama_barang);
@@ -106,13 +103,13 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
                             satuan.setText("Kilogram");
                         }
                         Button buttonRemove = (Button) addView.findViewById(R.id.deleteButton);
-                        Log.i("ObjekTransaksiActivity", "input 5 sukses");
+                        Log.i("PembelianActivity", "input 5 sukses");
                         buttonRemove.setOnClickListener(new View.OnClickListener() {
 
                             @Override
                             public void onClick(View v) {
                                 ((LinearLayout) addView.getParent()).removeView(addView);
-                                Log.i("ObjekTransaksiActivity", "input 6 sukses");
+                                Log.i("PembelianActivity", "input 6 sukses");
                             }
                         });
 
@@ -171,4 +168,5 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
             startActivityForResult(intent, 1);
         }
     }
+
 }
