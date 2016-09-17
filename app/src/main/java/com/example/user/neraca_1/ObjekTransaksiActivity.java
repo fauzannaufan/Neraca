@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -37,7 +38,8 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
     AlertDialog.Builder builder;
     String[] list_item;
     String[] list_satuan;
-    String[] list_dummy = {"-Item Baru-", "Mie Kuning", "Daging Sapi", "Caisim"};
+    String[] list_dummy = {"-Item Baru-", "Bakso", "Kerupuk"};
+    EditText editText;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -58,6 +60,8 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
             objekMasuk = "Uang";
             objekKeluar = "Barang";
         }
+
+        editText = (EditText) findViewById(R.id.nominalInput);
 
         container = (LinearLayout) findViewById(R.id.container);
         jumlah_barang = 0;
@@ -89,21 +93,15 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
                         } else if (which == 1) {
                             addView = layoutInflater.inflate(R.layout.tambah_barang, null);
                             TextView nama = (TextView) addView.findViewById(R.id.nama_barang);
-                            nama.setText("Mie Kuning");
+                            nama.setText("Bakso");
                             TextView satuan = (TextView) addView.findViewById(R.id.satuan_barang);
-                            satuan.setText("Kilogram");
-                        } else if (which == 2) {
-                            addView = layoutInflater.inflate(R.layout.tambah_barang, null);
-                            TextView nama = (TextView) addView.findViewById(R.id.nama_barang);
-                            nama.setText("Daging Sapi");
-                            TextView satuan = (TextView) addView.findViewById(R.id.satuan_barang);
-                            satuan.setText("Kilogram");
+                            satuan.setText("buah");
                         } else {
                             addView = layoutInflater.inflate(R.layout.tambah_barang, null);
                             TextView nama = (TextView) addView.findViewById(R.id.nama_barang);
-                            nama.setText("Caisim");
+                            nama.setText("Kerupuk");
                             TextView satuan = (TextView) addView.findViewById(R.id.satuan_barang);
-                            satuan.setText("Kilogram");
+                            satuan.setText("buah");
                         }
                         Button buttonRemove = (Button) addView.findViewById(R.id.deleteButton);
                         Log.i("ObjekTransaksiActivity", "input 5 sukses");

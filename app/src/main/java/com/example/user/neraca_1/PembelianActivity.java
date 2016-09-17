@@ -34,7 +34,7 @@ public class PembelianActivity extends ActionBarActivity implements View.OnClick
     AlertDialog.Builder builder;
     String[] list_item;
     String[] list_satuan;
-    String[] list_dummy = {"-Item Baru-", "Mie Kuning", "Daging Sapi", "Caisim"};
+    String[] list_dummy = {"-Item Baru-", "Mie Kuning", "Daging Sapi", "Kerupuk"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,19 +88,19 @@ public class PembelianActivity extends ActionBarActivity implements View.OnClick
                             TextView nama = (TextView) addView.findViewById(R.id.nama_barang);
                             nama.setText("Mie Kuning");
                             TextView satuan = (TextView) addView.findViewById(R.id.satuan_barang);
-                            satuan.setText("Kilogram");
+                            satuan.setText("kilogram");
                         } else if (which == 2) {
                             addView = layoutInflater.inflate(R.layout.tambah_barang, null);
                             TextView nama = (TextView) addView.findViewById(R.id.nama_barang);
                             nama.setText("Daging Sapi");
                             TextView satuan = (TextView) addView.findViewById(R.id.satuan_barang);
-                            satuan.setText("Kilogram");
+                            satuan.setText("kilogram");
                         } else {
                             addView = layoutInflater.inflate(R.layout.tambah_barang, null);
                             TextView nama = (TextView) addView.findViewById(R.id.nama_barang);
-                            nama.setText("Caisim");
+                            nama.setText("Kerupuk");
                             TextView satuan = (TextView) addView.findViewById(R.id.satuan_barang);
-                            satuan.setText("Kilogram");
+                            satuan.setText("buah");
                         }
                         Button buttonRemove = (Button) addView.findViewById(R.id.deleteButton);
                         Log.i("PembelianActivity", "input 5 sukses");
