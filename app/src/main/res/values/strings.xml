@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Neraca</string>
+    <string name="action_settings">Settings</string>
+    <string name="pilih_menu">Pilih menu yang anda inginkan</string>
+    <string-array name="list_transaksi">
+        <item>Penjualan</item>
+        <item>Pembelian</item>
+        <item>Pemakaian Jasa</item>
+        <item>Produksi</item>
+        <item>Hutang</item>
+        <item>Piutang</item>
+    </string-array>
+    <string-array name="list_objek">
+        <item>Uang</item>
+        <item>Barang</item>
+        <item>Jasa</item>
+        <item>Hutang</item>
+        <item>Piutang</item>
+    </string-array>
+</resources>

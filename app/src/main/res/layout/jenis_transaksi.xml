@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Transaksi"
+        android:id="@+id/transaksiLabel"
+        android:background="#a20101"
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/transaksiLabel"
+        android:layout_above="@+id/nextButton" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Jenis Transaksi"
+                android:id="@+id/jenisTransaksiLabel"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/jenisTransaksiSpinner"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="45dp"
+                android:layout_below="@+id/jenisTransaksiLabel"
+                android:focusable="false"
+                android:background="#ffffff"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Waktu Transaksi"
+                android:id="@+id/waktuTransaksiLabel"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:textSize="16dp"
+                android:layout_below="@+id/jenisTransaksiSpinner" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Hari Ini"
+                android:id="@+id/waktuTransaksiButton"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/waktuTransaksiLabel"
+                android:layout_marginRight="45dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Keterangan"
+                android:id="@+id/keteranganTransaksiLabel"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:textSize="16dp"
+                android:layout_below="@+id/waktuTransaksiButton" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/keteranganTransaksiInput"
+                android:layout_below="@+id/keteranganTransaksiLabel"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="45dp"
+                android:hint="Keterangan Transaksi"
+                android:textAlignment="gravity"
+                android:gravity="top"
+                android:background="#ffffff"
+                android:padding="10dp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:id="@+id/nextButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:onClick="goToObjekTransaksi"
+        android:text="Berikutnya"
+        android:background="#0052a5"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+</RelativeLayout>

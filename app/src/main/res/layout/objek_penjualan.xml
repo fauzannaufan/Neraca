@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Transaksi"
+        android:id="@+id/transaksiLabel"
+        android:background="#a20101"
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:singleLine="false" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView3"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/transaksiLabel"
+        android:layout_above="@+id/submitButton" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/masukLayout"
+                android:layout_marginTop="0dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Objek Masuk :"
+                    android:id="@+id/objekMasukLabel"
+                    android:textColor="#471818"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:padding="15dp"
+                    android:background="#cccccc"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Uang"
+                    android:id="@+id/jenisMasukLabel"
+                    android:textSize="22dp"
+                    android:textColor="#3b3ed1"
+                    android:padding="15dp"
+                    android:layout_toRightOf="@+id/objekMasukLabel"
+                    android:background="#cccccc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Nominal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@+id/objekMasukLabel"
+                    android:layout_marginTop="15dp"
+                    android:singleLine="false"
+                    android:id="@+id/nominalLabel"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/nominalInput"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@+id/nominalLabel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Rupiah"
+                    android:id="@+id/satuanLabel"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/nominalInput"
+                    android:layout_alignBaseline="@+id/nominalInput"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:id="@+id/separator"
+                android:layout_below="@+id/masukLayout"
+                android:background="#eb1515" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/keluarLayout"
+                android:layout_marginTop="0dp"
+                android:layout_below="@+id/separator">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Objek Keluar :"
+                    android:id="@+id/objekKeluarLabel"
+                    android:textColor="#471818"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:background="#cccccc" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Barang"
+                    android:id="@+id/jenisKeluarLabel"
+                    android:layout_toRightOf="@+id/objekKeluarLabel"
+                    android:textColor="#3b3ed1"
+                    android:textSize="22dp"
+                    android:padding="15dp"
+                    android:background="#cccccc" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/container"
+                    android:layout_below="@+id/objekKeluarLabel">
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tambahkan Item"
+                    android:id="@+id/addItemButton"
+                    android:layout_below="@+id/container"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:id="@+id/submitButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="Submit"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#0052a5"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#dddddd">
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/namaBarang"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Nama Barang" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/jumlah_barang"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/namaBarang"
+            android:hint="Jumlah" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/satuan_barang"
+            android:layout_toRightOf="@+id/jumlah_barang"
+            android:layout_alignBaseline="@+id/jumlah_barang"
+            android:layout_marginRight="30dp"
+            android:hint="Satuan" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="New Button"
+            android:id="@+id/deleteButton"
+            android:layout_gravity="right"
+            android:layout_alignBaseline="@+id/nama_barang"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp" />
+    </RelativeLayout>
+
+</LinearLayout>
