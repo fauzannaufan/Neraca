@@ -30,7 +30,7 @@ public class DBHelper extends SQLiteOpenHelper {
         // TODO Auto-generated method stub
         db.execSQL(
                 "create table transaksi " +
-                        "(id_transaksi integer primary key, waktu_transaksi text,jenis_transaksi text,keterangan_transaksi text)"
+                        "(id_transaksi integer primary key, waktu_transaksi text, jenis_transaksi text,keterangan_transaksi text)"
         );
         db.execSQL("create table objek_ref" +
                 "(id_objek_ref integer primary key, kategori text, nama text, satuan text)"
@@ -58,7 +58,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return res;
     }
 
-    public Cursor getListBarang (){
+    public Cursor getListBarang() {
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery( "select nama, satuan from objek_ref where kategori='barang'", null );
@@ -75,7 +75,7 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertTransaksi  (ArrayList<String> data)
+    public boolean insertTransaksi (ArrayList<String> data)
     {
         SQLiteDatabase db1 = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -87,11 +87,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db2 = this.getWritableDatabase();
         contentValues = new ContentValues();
-        //contentValues.put("id_objek_ref", 100);
+        contentValues.put("id_objek_ref", 100);
         contentValues.put("kategori", "uang");
         contentValues.put("nama", "Uang");
         contentValues.put("satuan", "rupiah");
-        db2.insert("objek_ref", null, contentValues);
+        //db2.insert("objek_ref", null, contentValues);
 
         SQLiteDatabase db3 = this.getWritableDatabase();
         contentValues = new ContentValues();
@@ -100,7 +100,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("id_objek_ref", 1);
         contentValues.put("status", 1);
         contentValues.put("nominal", 1000);
-        db3.insert("objek_transaksi", null, contentValues);
+        //db3.insert("objek_transaksi", null, contentValues);
 
         return true;
     }
@@ -120,6 +120,25 @@ public class DBHelper extends SQLiteOpenHelper {
             array_list.add(res.getString(res.getColumnIndex("jenis_transaksi")));
             array_list.add(res.getString(res.getColumnIndex("waktu_transaksi")));
             array_list.add(res.getString(res.getColumnIndex("keterangan_transaksi")));
+            res.moveToNext();
+        }
+        return array_list;
+    }
+
+    public ArrayList<String> getAllObjekRef() {
+        ArrayList<String> array_list = new ArrayList<String>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res =  db.rawQuery( "select * from objek_ref", null );
+        res.moveToFirst();
+        int row_num = res.getCount();
+
+        array_list.add(row_num + "");
+        while(res.isAfterLast() == false){
+            array_list.add(res.getString(res.getColumnIndex("id_objek_ref")));
+            array_list.add(res.getString(res.getColumnIndex("kategori")));
+            array_list.add(res.getString(res.getColumnIndex("nama")));
+            array_list.add(res.getString(res.getColumnIndex("satuan")));
             res.moveToNext();
         }
         return array_list;

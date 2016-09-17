@@ -20,7 +20,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/scrollView2"
         android:layout_gravity="right"
         android:fillViewport="false"
@@ -37,7 +37,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="30dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="3 / 8 / 2016"
+                android:text="18 / 9 / 2016"
                 android:id="@+id/textView3"
                 android:textSize="20dp"
                 android:layout_centerHorizontal="true"
@@ -57,7 +57,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Uang 100.000 Rupiah"
                 android:id="@+id/textView4"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="right"
                 android:textColor="#c32a2a" />
@@ -65,130 +65,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Indomie 2 Kardus"
+                android:text="Indomie 2 Dus"
                 android:id="@+id/textView5"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="left"
                 android:textColor="#0b9f26" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Kecap 1 Botol"
-                android:id="@+id/textView6"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="left"
-                android:textColor="#FF0B9F26" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Saos 1 Botol"
-                android:id="@+id/textView7"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="left"
-                android:textColor="#FF0B9F26" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=" "
-                android:id="@+id/textView8"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Mie Goreng 10 Mangkok"
-                android:id="@+id/textView9"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="right"
-                android:textColor="#FFC32A2A" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Uang 80.000 Rupiah"
-                android:id="@+id/textView10"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="left"
-                android:textColor="#FF0B9F26" />
 
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="30dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="7 / 8 / 2016"
-                android:id="@+id/textViewi"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:textAlignment="center"
-                android:background="#CCCCCC"
-                android:layout_marginTop="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=" "
-                android:id="@+id/textViewh"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Tepung 1 Kilogram"
-                android:id="@+id/textViewg"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="right"
-                android:textColor="#c32a2a" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Bakso 100 Buah"
-                android:id="@+id/textViewf"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="left"
-                android:textColor="#0b9f26" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=" "
-                android:id="@+id/textViewc"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Bakso 10 Mangkok"
-                android:id="@+id/textViewb"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="right"
-                android:textColor="#FFC32A2A" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Uang 120.000 Rupiah"
-                android:id="@+id/textViewa"
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="left"
-                android:textColor="#FF0B9F26" />
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="New Text"
+        android:id="@+id/textView11" />
 
 </LinearLayout>

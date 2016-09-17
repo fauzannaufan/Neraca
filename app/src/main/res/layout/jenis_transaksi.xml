@@ -110,14 +110,13 @@
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:id="@+id/nextButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
         android:onClick="goToObjekTransaksi"
         android:text="Berikutnya"
         android:background="#0052a5"
         android:textColor="#ffffff"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp" />
+        android:layout_marginRight="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

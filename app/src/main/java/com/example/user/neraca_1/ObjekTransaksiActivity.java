@@ -26,6 +26,8 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
 
     DBHelper mydb;
     String jenisTransaksi;
+    String waktuTransaksi;
+    String keteranganTransaksi;
     String objekMasuk;
     String objekKeluar;
     LinearLayout container;
@@ -49,8 +51,12 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
         Bundle extraBundle = intentExtras.getExtras();
 
         jenisTransaksi = extraBundle.getString("jenis");
-        objekMasuk = extraBundle.getString("waktu");
-        objekKeluar = extraBundle.getString("keterangan");
+        waktuTransaksi = extraBundle.getString("waktu");
+        keteranganTransaksi = extraBundle.getString("keterangan");
+        if (jenisTransaksi.equals("Penjualan")) {
+            objekMasuk = "Uang";
+            objekKeluar = "Barang";
+        }
 
         TextView objekMasukLabel = (TextView) findViewById(R.id.jenisMasukLabel);
         objekMasukLabel.setText(objekMasuk);
@@ -123,9 +129,9 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
     public void onClick(View v) {
         ArrayList<String> data = new ArrayList<String>();
 
+        data.add(waktuTransaksi);
         data.add(jenisTransaksi);
-        data.add(objekMasuk);
-        data.add(objekKeluar);
+        data.add(keteranganTransaksi);
 
         insertTransaksi(data);
 

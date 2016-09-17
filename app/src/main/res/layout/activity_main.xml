@@ -18,105 +18,78 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/app_name"
-                android:id="@+id/textView"
-                android:textSize="35sp"
-                android:textAlignment="center"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:textColor="#a20101"
-                android:typeface="serif" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/pilih_menu"
-                android:id="@+id/textView2"
-                android:layout_marginTop="0dp"
-                android:layout_alignParentLeft="false"
-                android:layout_below="@+id/textView"
-                android:layout_centerHorizontal="true"
-                android:textColor="#471818"
-                android:typeface="normal" />
+                android:layout_height="50dp"
+                android:id="@+id/textView" />
 
             <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:id="@+id/transaksiButton"
-                android:layout_below="@+id/textView2"
+                android:layout_below="@+id/textView"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:layout_marginTop="40dp"
                 android:layout_marginLeft="40dp"
                 android:onClick="openTransaksi"
-                android:src="@mipmap/ic_tambah_transaksi"
                 android:background="#00ffffff"
                 android:clickable="false"
                 android:scaleType="centerCrop" />
 
             <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:id="@+id/rekomendasiButton"
-                android:layout_below="@+id/textView2"
+                android:layout_below="@+id/textView"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="40dp"
                 android:layout_marginRight="40dp"
-                android:src="@mipmap/ic_rekomendasi"
                 android:scaleType="centerCrop"
                 android:background="#00ffffff" />
 
             <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:id="@+id/rekapitulasiButton"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_below="@+id/transaksiButton"
                 android:layout_alignParentLeft="true"
                 android:onClick="openRekap"
-                android:src="@mipmap/ic_rekapitulasi"
                 android:scaleType="centerCrop"
                 android:background="#00ffffff" />
 
             <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:id="@+id/penghitunganButton"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="40dp"
                 android:layout_below="@+id/rekomendasiButton"
-                android:src="@mipmap/ic_penghitungan"
                 android:scaleType="centerCrop"
                 android:background="#00ffffff" />
 
             <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:id="@+id/bantuanButton"
                 android:layout_below="@+id/rekapitulasiButton"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_alignParentLeft="true"
-                android:src="@mipmap/ic_bantuan"
                 android:scaleType="centerCrop"
                 android:background="#00ffffff" />
 
             <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:id="@+id/pengaturanButton"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="40dp"
                 android:layout_below="@+id/penghitunganButton"
-                android:src="@mipmap/ic_pengaturan"
                 android:background="#00ffffff"
                 android:scaleType="centerCrop" />
 

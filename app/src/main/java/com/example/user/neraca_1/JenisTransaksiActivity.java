@@ -60,8 +60,7 @@ public class JenisTransaksiActivity extends ActionBarActivity {
                             public void onDateSet(DatePicker view, int year,
                                                   int monthOfYear, int dayOfMonth) {
                                 // set day of month , month and year value in the edit text
-                                date.setText(dayOfMonth + "/"
-                                        + (monthOfYear + 1) + "/" + year);
+                                date.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
 
                             }
                         }, mYear, mMonth, mDay);
@@ -75,7 +74,6 @@ public class JenisTransaksiActivity extends ActionBarActivity {
         Spinner jenisSpinner = (Spinner) findViewById(R.id.jenisTransaksiSpinner);
         Button waktuButton = (Button) findViewById(R.id.waktuTransaksiButton);
         TextView keteranganTextView = (TextView) findViewById(R.id.keteranganTransaksiInput);
-
 
         String jenisTransaksi = jenisSpinner.getSelectedItem().toString();
         String waktuTransaksi = waktuButton.getText().toString();

@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Bungkus"
+            android:text="Dus"
             android:id="@+id/satuan_barang"
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/editText"
@@ -43,11 +43,12 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:text="New Button"
+            android:text="x"
             android:id="@+id/deleteButton"
             android:layout_gravity="right"
-            android:layout_alignBaseline="@+id/nama_barang"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp" />
+            android:layout_marginRight="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/editText"
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
 </LinearLayout>
