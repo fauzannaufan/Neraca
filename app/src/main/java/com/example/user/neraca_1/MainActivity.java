@@ -31,4 +31,9 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, PengingatActivity.class);
         startActivity(intent);
     }
+
+    public void openEkspor(View view) {
+        Intent intent = new Intent(this, EksporDataActivity.class);
+        startActivity(intent);
+    }
 }

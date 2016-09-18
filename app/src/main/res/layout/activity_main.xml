@@ -76,6 +76,7 @@
                 android:layout_below="@+id/pengingatButton"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ekspor"
+                android:onClick="openEkspor"
                 android:background="#00ffffff" />
 
             <ImageButton

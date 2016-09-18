@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.test"
     android:installLocation="preferExternal">
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -44,8 +46,13 @@
             android:label="@string/app_name"
             android:parentActivityName="com.example.user.neraca_1.JenisTransaksiActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.example.user.neraca_1.PembelianActivity" />
-        <activity android:name="com.example.user.neraca_1.PengingatActivity"></activity>
+        <activity
+            android:name="com.example.user.neraca_1.PembelianActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.user.neraca_1.PengingatActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.user.neraca_1.EksporDataActivity"></activity>
     </application>
 
 </manifest>
