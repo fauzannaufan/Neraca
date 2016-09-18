@@ -8,17 +8,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 
-/**
- * Created by User on 7/22/2016.
- */
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "Neraca.db";
-    public static final String TRANSAKSI_TABLE_NAME = "transaksi";
-    public static final String TRANSAKSI_COLUMN_ID = "id_transaksi";
-    public static final String TRANSAKSI_COLUMN_WAKTU = "waktu_transaksi";
-    public static final String TRANSAKSI_COLUMN_JENIS = "jenis_transaksi";
-    public static final String TRANSAKSI_COLUMN_KETERANGAN = "keterangan_transaksi";
+    //public static final String TRANSAKSI_TABLE_NAME = "transaksi";
+    //public static final String TRANSAKSI_COLUMN_ID = "id_transaksi";
+    //public static final String TRANSAKSI_COLUMN_WAKTU = "waktu_transaksi";
+    //public static final String TRANSAKSI_COLUMN_JENIS = "jenis_transaksi";
+    //public static final String TRANSAKSI_COLUMN_KETERANGAN = "keterangan_transaksi";
 
     public DBHelper(Context context)
     {
@@ -27,7 +24,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // TODO Auto-generated method stub
         db.execSQL(
                 "create table transaksi " +
                         "(id_transaksi integer primary key, waktu_transaksi text, jenis_transaksi text,keterangan_transaksi text)"
@@ -40,6 +36,7 @@ public class DBHelper extends SQLiteOpenHelper {
         );
     }
 
+    /*
     public Cursor getTransaksiPada (String waktu){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery( "select * from transaksi where waktu_transaksi="+waktu+"", null );
@@ -57,18 +54,16 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor res =  db.rawQuery("select * from objek_transaksi where id_transaksi=" + id_transaksi + " and status=2", null);
         return res;
     }
+    */
 
     public Cursor getListBarang() {
 
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select nama, satuan from objek_ref where kategori='barang'", null );
-
-        return res;
+        return db.rawQuery( "select nama, satuan from objek_ref where kategori='barang'", null );
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // TODO Auto-generated method stub
         db.execSQL("DROP TABLE IF EXISTS transaksi");
         db.execSQL("DROP TABLE IF EXISTS objek_ref");
         db.execSQL("DROP TABLE IF EXISTS objek_transaksi");
@@ -85,6 +80,7 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("keterangan_transaksi", data.get(2));
         db1.insert("transaksi", null, contentValues);
 
+        /*
         SQLiteDatabase db2 = this.getWritableDatabase();
         contentValues = new ContentValues();
         contentValues.put("id_objek_ref", 100);
@@ -102,9 +98,11 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("nominal", 1000);
         //db3.insert("objek_transaksi", null, contentValues);
 
+        */
         return true;
     }
 
+    /*
     public ArrayList<String> getAllTransaksi() {
         ArrayList<String> array_list = new ArrayList<String>();
 
@@ -143,8 +141,6 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return array_list;
     }
-
-
-
+    */
 
 }

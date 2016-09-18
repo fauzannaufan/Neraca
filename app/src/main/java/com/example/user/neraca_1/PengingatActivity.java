@@ -14,13 +14,14 @@ public class PengingatActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_pengingat);
 
     }
 
     public void GoBack(View view) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
 
         Toast toast = Toast.makeText(getApplicationContext(), "Berhasil membuat pengingat!", Toast.LENGTH_SHORT);

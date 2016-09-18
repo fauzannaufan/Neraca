@@ -52,7 +52,8 @@
         <activity
             android:name="com.example.user.neraca_1.PengingatActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.example.user.neraca_1.EksporDataActivity"></activity>
+        <activity android:name="com.example.user.neraca_1.EksporDataActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

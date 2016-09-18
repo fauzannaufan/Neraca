@@ -9,16 +9,8 @@ import android.widget.TextView;
 
 import com.example.user.test.R;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-
-/**
- * Created by User on 8/2/2016.
- */
 public class JurnalTransaksiActivity extends ActionBarActivity {
 
-    DBHelper mydb;
     String[] barang = {"Uang", "Mie Kuning", "Daging Sapi", "Kerupuk", "Bakso"};
     String[] jumlah = {"Rp100.000", "1 kg", "1 kg", "15 buah", "Habis"};
     TextView nama;
@@ -27,7 +19,7 @@ public class JurnalTransaksiActivity extends ActionBarActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.jurnal_transaksi);
 
         nama = (TextView) findViewById(R.id.nama_barang);

@@ -30,11 +30,13 @@
             android:layout_marginTop="20dp"
             android:text="Beri nama file laporan"
             android:typeface="serif"
+            android:labelFor="@+id/nama_file"
             android:textSize="16sp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:id="@+id/nama_file"
             android:layout_marginEnd="15dp"/>
 

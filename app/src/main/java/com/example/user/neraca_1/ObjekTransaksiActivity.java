@@ -22,9 +22,6 @@ import com.example.user.test.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by User on 7/21/2016.
- */
 public class ObjekTransaksiActivity extends ActionBarActivity implements View.OnClickListener {
 
     DBHelper mydb;
@@ -45,7 +42,7 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.objek_penjualan);
 
         Button submitButton = (Button)findViewById(R.id.submitButton);
@@ -142,6 +139,7 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
         insertTransaksi(data);
 
         Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
 
         Toast toast = Toast.makeText(getApplicationContext(), "Transaksi berhasil dicatat!", Toast.LENGTH_SHORT);
@@ -158,9 +156,9 @@ public class ObjekTransaksiActivity extends ActionBarActivity implements View.On
         res.moveToFirst();
         barang[0][0] = "-Barang Baru-";
         barang[1][0] = "--";
-        while(res.isAfterLast() == false) {
-            barang[0][i] = new String(res.getString(res.getColumnIndex("nama")));
-            barang[1][i] = new String(res.getString(res.getColumnIndex("satuan")));
+        while(!res.isAfterLast()) {
+            barang[0][i] = res.getString(res.getColumnIndex("nama"));
+            barang[1][i] = res.getString(res.getColumnIndex("satuan"));
             i++;
         }
 

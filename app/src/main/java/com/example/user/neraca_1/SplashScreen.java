@@ -7,9 +7,6 @@ import android.view.Window;
 
 import com.example.user.test.R;
 
-/**
- * Created by M. Fauzan Naufan on 17/09/2016.
- */
 public class SplashScreen extends Activity {
 
     @Override

@@ -13,7 +13,7 @@
         android:id="@+id/transaksiLabel"
         android:background="#a20101"
         android:textColor="#ffffff"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
         android:layout_alignParentTop="true"
@@ -31,7 +31,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:paddingBottom="15dp">
 
             <RelativeLayout
@@ -49,7 +49,7 @@
                     android:id="@+id/objekMasukLabel"
                     android:textColor="#471818"
                     android:textStyle="bold"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:padding="15dp"
                     android:background="#cccccc"/>
 
@@ -58,7 +58,7 @@
                     android:layout_height="fill_parent"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:id="@+id/jenisMasukLabel"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textColor="#3b3ed1"
                     android:padding="15dp"
                     android:layout_toRightOf="@+id/objekMasukLabel"
@@ -106,7 +106,7 @@
                     android:text="Objek Keluar"
                     android:id="@+id/objekKeluarLabel"
                     android:textColor="#471818"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="bold"
                     android:padding="15dp"
                     android:background="#cccccc" />
@@ -118,7 +118,7 @@
                     android:id="@+id/jenisKeluarLabel"
                     android:layout_toRightOf="@+id/objekKeluarLabel"
                     android:textColor="#3b3ed1"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:padding="15dp"
                     android:background="#cccccc"
                     android:text="Uang" />
@@ -133,7 +133,8 @@
                     android:layout_marginTop="15dp"
                     android:singleLine="false"
                     android:id="@+id/nominalLabel"
-                    android:textSize="16dp" />
+                    android:labelFor="@+id/nominalInput"
+                    android:textSize="16sp" />
 
                 <EditText
                     android:layout_width="150dp"
@@ -153,7 +154,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@+id/nominalInput"
                     android:layout_alignBaseline="@+id/nominalInput"
-                    android:textSize="16dp" />
+                    android:textSize="16sp" />
 
             </RelativeLayout>
 
@@ -177,7 +178,7 @@
                     android:text="Ambil Foto Nota"
                     android:id="@+id/takePhotoLabel"
                     android:textColor="#471818"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="bold"
                     android:padding="15dp"
                     android:background="#cccccc" />

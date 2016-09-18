@@ -16,17 +16,15 @@ import com.example.user.test.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
-/**
- * Created by User on 7/21/2016.
- */
 public class JenisTransaksiActivity extends ActionBarActivity {
     Button date;
     DatePickerDialog datePickerDialog;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.jenis_transaksi);
 
         Spinner jenisSpinner = (Spinner) findViewById(R.id.jenisTransaksiSpinner);
@@ -39,7 +37,7 @@ public class JenisTransaksiActivity extends ActionBarActivity {
 
         date = (Button) findViewById(R.id.waktuTransaksiButton);
         Calendar c = Calendar.getInstance();
-        SimpleDateFormat df = new SimpleDateFormat("d/M/yyyy");
+        SimpleDateFormat df = new SimpleDateFormat("d/M/yyyy", Locale.US);
         String formattedDate = df.format(c.getTime());
         date.setText(formattedDate);
         // perform click event on edit text
@@ -60,7 +58,8 @@ public class JenisTransaksiActivity extends ActionBarActivity {
                             public void onDateSet(DatePicker view, int year,
                                                   int monthOfYear, int dayOfMonth) {
                                 // set day of month , month and year value in the edit text
-                                date.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+                                String the_date = dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
+                                date.setText(the_date);
 
                             }
                         }, mYear, mMonth, mDay);
